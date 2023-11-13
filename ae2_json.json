@@ -1,0 +1,50 @@
+{
+    "PIZZASINFO": {
+
+        "TAMANOS": [
+            {
+                "SIZE": "Pequeña",
+                "PRICE": "6"
+            },
+            {
+                "SIZE": "Mediana",
+                "PRICE": "10"
+            },
+            {
+                "SIZE": "Grande",
+                "PRICE": "14"
+            },
+            {
+                "SIZE": "Familiar",
+                "PRICE": "18"
+            }
+        ], 
+
+        "INGREDIENTES": [
+            {
+                "NAME": "Masa Especial",
+                "PRICE": "3" 
+            },
+            {
+                "NAME": "Salsa Especial",
+                "PRICE": "2"
+            },
+            {
+                "NAME": "Pienso",
+                "PRICE": "2"
+            },
+            {
+                "NAME": "Comida en lata",
+                "PRICE": "3"
+            },
+            {
+                "NAME": "Sardinas",
+                "PRICE": "2" 
+            },
+            {
+                "NAME": "Aceitunas",
+                "PRICE": "1" 
+            }
+        ]
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="ae2_js.js" defer></script>
+        <title>AE-2</title>
+    </head>
+    <body>
+        <div id="div1">
+                <h1>Pizzeria Gatitos</h1><br>
+                
+                <h3>Formulario de pedido</h3><br>
+                
+                <form id="formPizza">
+                    <label for="nombre">Nombre:</label>
+                    <input  id="nombre" name="datos" type="text" required>
+            
+                    <label for="direccion">Dirección:</label>
+                    <input id="direccion" name="datos" type="text" required>
+            
+                    <label for="telefono">Teléfono:</label>
+                    <input id="telefono" name="datos" type="tel" required>
+            
+                    <label for="email">Email:</label>
+                    <input id="email" name="datos" type="email"  required><br><br>
+                    
+                    <label>Tamaño de la Pizza</label> <!--Desde JSON-->
+                    <div id="divTam"></div><br>
+                    
+                    <label>Ingredientes</label> <!--Desde JSON-->
+                    <div id="divIng"></div><br>
+                    
+                    <button id="recargar" type="button">¡Pulsa para recargar la página!</button><br><br>
+                    <button id="procesar" type="button">¡Pulsa para procesar tu pedido!</button>
+            </form>
+        </div>
+    </body>
+</html>
