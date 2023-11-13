@@ -1,0 +1,48 @@
+{
+  "ingredientes": [
+    {
+      "precio": 3,
+      "nombre": "Salsa de tomate"
+    },
+    {
+      "precio": 1,
+      "nombre": "Queso"
+    },
+    {
+      "precio": 3,
+      "nombre": "Berenjena"
+    },
+    {
+      "precio": 3.5,
+      "nombre": "Champiñones"
+    },
+    {
+      "precio": 2,
+      "nombre": "Aceitunas"
+    },
+    {
+      "precio": 1,
+      "nombre": "Pimiento verde"
+    },
+    {
+      "precio": 2,
+      "nombre": "Cebolla"
+    }
+  ],
+
+  "tamaños": [
+    {
+      "precio": 5,
+      "nombre": "Pequeña"
+    },
+    {
+      "precio": 10,
+      "nombre": "Mediana"
+    },
+
+    {
+      "precio": 15,
+      "nombre": "Grande"
+    }
+  ]
+}
