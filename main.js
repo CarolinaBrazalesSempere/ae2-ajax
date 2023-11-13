@@ -8,60 +8,42 @@ let ingredienteLabel = document.getElementById("ingrediente");
 let reloadBtn = document.getElementById("reload");
 let totalAmount = document.getElementById("total");
 
-//llamada al servidor para traer los datos nada más cargar la página
-window.onload = function ajaxData() {
+function ajaxData(callback) {
   const xmlHttp = new XMLHttpRequest();
 
   xmlHttp.open("GET", URL_DESTINO + RECURSO, true);
   xmlHttp.send();
 
   xmlHttp.onload = function () {
-    getDataIngredients(this.responseText);
-    getDataSizes(this.responseText);
+    callback(this.responseText);
   };
 
   xmlHttp.onerror = function () {
     alert("Algo ha fallado");
   };
+}
+
+//llamada al servidor para traer los datos nada más cargar la página
+window.onload = function () {
+  ajaxData(function (responseText) {
+    getDataIngredients(responseText);
+    getDataSizes(responseText);
+  });
 };
 
 //refrescar la página trayéndonos de nuevo los datos del servidor por si hubiera actualizaciones
-reloadBtn.addEventListener(
-  "click",
-
-  function ajaxData() {
-    const xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", URL_DESTINO + RECURSO, true);
-    xmlHttp.send();
-
-    xmlHttp.onload = function () {
-      location.reload();
-    };
-
-    xmlHttp.onerror = function () {
-      alert("Algo ha fallado");
-    };
-  }
-);
+reloadBtn.addEventListener("click", function () {
+  ajaxData(function () {
+    location.reload();
+  });
+});
 
 // calcular el precio total del pedido al clicar en el botón pasándole la función calcPrice
-totalAmount.addEventListener(
-  "click",
-
-  function ajaxData() {
-    const xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", URL_DESTINO + RECURSO, true);
-    xmlHttp.send();
-
-    xmlHttp.onload = function () {
-      calcPrice(this.responseText);
-    };
-
-    xmlHttp.onerror = function () {
-      alert("Algo ha fallado");
-    };
-  }
-);
+totalAmount.addEventListener("click", function () {
+  ajaxData(function (responseText) {
+    calcPrice(responseText);
+  });
+});
 
 function getDataIngredients(json) {
   const objJson = JSON.parse(json);
