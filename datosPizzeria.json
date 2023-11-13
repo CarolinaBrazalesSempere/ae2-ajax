@@ -1,0 +1,34 @@
+{
+  "tamaños": [
+    {
+      "nombre": "Pequeña",
+      "precio": 5
+    },
+    {
+      "nombre": "Mediana",
+      "precio": 10
+    },
+    {
+      "nombre": "Grande",
+      "precio": 15
+    }
+  ],
+  "ingredientes": [
+    {
+      "nombre": "Queso",
+      "precio": 1
+    },
+    {
+      "nombre": "Pechuga",
+      "precio": 2
+    },
+    {
+      "nombre": "Piña",
+      "precio": 1.5
+    },
+    {
+      "nombre": "Tomate",
+      "precio": 1
+    }
+  ]
+}

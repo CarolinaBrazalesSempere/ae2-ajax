@@ -1,44 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="main.js" defer></script>
-    <title>AE 2 - AJAX</title>
+    <title>Pizzera</title>
+    <script type="text/javascript" src="prueba.js" defer></script> 
 </head>
+<!--
+    Le metemos estilos a la pagina
+-->
+<body style="text-align: center; background-color: rgb(203, 239, 243);">
+    <h3> Datos de entrega : </h3>
+    <hr style="width: 8%;"> 
+    <form id="formulario">
+        <label for="nombre"> Nombre :
+            <input type="text" name="nombre" id="nombre">
+        </label>
+        <br/>
+        <br/>
 
-<body>
-    <div class="title-img">
-        <h1 class="main-title">Formulario de pedido de pizza</h1>
-        <img src="img/pizza.png" alt="pizza" class="pizza-img">
-    </div>
-    <form id="pizzaForm" class="pizza-form">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <label for="direccion">Dirección :
+            <input type="text" name="direccion" id="direccion">
+        </label>
+        <br/>
+        <br/>
+        
+        <label for="telefono"> Teléfono :
+            <input type="text" name="telefono" id="telefono">
+        </label>
+        <br/>
+        <br/>
+        
+        <label for="email"> Email :
+            <input type="text" name="email" id="email">
+        </label>
+        <br/>
+        <br/>
+        <hr style="width: 35%;">
 
-        <label for="direccion">Dirección:</label>
-        <input type="text" id="direccion" name="direccion" required>
+        <!--
+            Inputs para hacer el radio button para el tamaño de la pizza
+        -->
+        <div id="tamaños">
 
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label class="title">Tamaño de la Pizza:</label><br>
-        <div id="tamaño"></div><br>
-
-        <label class="title">Ingredientes:</label><br>
-        <div id="ingrediente"></div><br>
-
-        <div class="btn-container">
-            <button id="total" type="button">Procesar pedido</button>
-            <button id="reload" type="button">Recargar</button>
+                <h3> Tamaño de la pizza : </h3>
+                <hr style="width: 9%;">
         </div>
+        
+        <!--
+            Checkbox para los ingredientes de la pizza
+        -->
+        <div id="ingredientes">
+            <h3>Ingredientes de la pizza (elige todos los que quieras) : </h3>
+            <hr style="width: 23%;"> 
+        </div>
+        
+      
+        <button id="botonProcesar">procesar</button>
+        <button id="botonRefrescar">Pulsa para refrescar la página </button>
+    
     </form>
 
-</body>
+    <br/>
+    <br/>
 
+    
+    
+    <p id="alerta" style="color: red; display: none;">Tienes que rellenar todos los campos</p>
+</body>
 </html>
