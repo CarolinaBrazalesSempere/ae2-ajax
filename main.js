@@ -8,6 +8,7 @@ let ingredienteLabel = document.getElementById("ingrediente");
 let reloadBtn = document.getElementById("reload");
 let totalAmount = document.getElementById("total");
 
+//llamada al servidor para traer los datos nada más cargar la página
 window.onload = function ajaxData() {
   const xmlHttp = new XMLHttpRequest();
 
@@ -24,6 +25,7 @@ window.onload = function ajaxData() {
   };
 };
 
+//refrescar la página trayéndonos de nuevo los datos del servidor por si hubiera actualizaciones
 reloadBtn.addEventListener(
   "click",
 
@@ -42,6 +44,7 @@ reloadBtn.addEventListener(
   }
 );
 
+// calcular el precio total del pedido al clicar en el botón pasándole la función calcPrice
 totalAmount.addEventListener(
   "click",
 
