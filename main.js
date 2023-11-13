@@ -38,8 +38,12 @@ reloadBtn.addEventListener("click", function () {
   });
 });
 
+//Si queremos pasar una funcion con parametros de entrada por parametro NO
+//podemos hacer directamente:
+//Debemos de crear una funcion que la llame
 // calcular el precio total del pedido al clicar en el botón pasándole la función calcPrice
 totalAmount.addEventListener("click", function () {
+  // como aquí queremos parámetros de entrada para pasarle a la función de callback necesitamos poner como segundo parámetro del listener una función anónima
   ajaxData(function (responseText) {
     calcPrice(responseText);
   });
